@@ -1,0 +1,157 @@
+
+
+**1. Automated Test Script for User Registration:**
+
+```java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class UserRegistrationTest {
+    WebDriver driver;
+
+    @BeforeClass
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        driver = new ChromeDriver();
+        // Additional setup code if needed
+    }
+
+    @Test
+    public void testSuccessfulUserRegistration() {
+        // Navigate to the registration page
+        driver.get("url/to/registration/page");
+
+        // Fill in valid registration details
+        WebElement emailInput = driver.findElement(By.id("email"));
+        WebElement passwordInput = driver.findElement(By.id("password"));
+        // Add other required fields if needed
+
+        emailInput.sendKeys("validemail@example.com");
+        passwordInput.sendKeys("ValidPassword123");
+        // Add other valid input fields
+
+        // Submit the registration form
+        WebElement registerButton = driver.findElement(By.id("registerButton"));
+        registerButton.click();
+
+        // Validate successful registration
+        WebElement successMessage = driver.findElement(By.id("successMessage"));
+        Assert.assertTrue(successMessage.isDisplayed());
+    }
+
+    @Test
+    public void testUserRegistrationWithExistingEmail() {
+        // Navigate to the registration page
+        driver.get("url/to/registration/page");
+
+        // Fill in registration details with an existing email
+        WebElement emailInput = driver.findElement(By.id("email"));
+        WebElement passwordInput = driver.findElement(By.id("password"));
+
+        emailInput.sendKeys("existingemail@example.com");
+        passwordInput.sendKeys("ValidPassword123");
+
+        // Submit the registration form
+        WebElement registerButton = driver.findElement(By.id("registerButton"));
+        registerButton.click();
+
+        // Validate the error message for existing email
+        WebElement errorMessage = driver.findElement(By.id("errorMessage"));
+        Assert.assertTrue(errorMessage.isDisplayed());
+    }
+
+    @AfterClass
+    public void tearDown() {
+        driver.quit();
+    }
+}
+```
+
+**2. Automated Test Script for Product Search:**
+
+```java
+// Similar setup code as before
+
+@Test
+public void testProductSearchWithValidKeyword() {
+    // Navigate to the search page
+    driver.get("url/to/search/page");
+
+    // Perform a search with a valid keyword
+    WebElement searchInput = driver.findElement(By.id("searchInput"));
+    searchInput.sendKeys("Laptop");
+
+    // Submit the search form
+    WebElement searchButton = driver.findElement(By.id("searchButton"));
+    searchButton.click();
+
+    // Validate search results
+    WebElement resultContainer = driver.findElement(By.id("resultContainer"));
+    Assert.assertTrue(resultContainer.isDisplayed());
+}
+
+@Test
+public void testProductSearchWithInvalidKeyword() {
+    // Navigate to the search page
+    driver.get("url/to/search/page");
+
+    // Perform a search with an invalid keyword
+    WebElement searchInput = driver.findElement(By.id("searchInput"));
+    searchInput.sendKeys("@!$%InvalidKeyword");
+
+    // Submit the search form
+    WebElement searchButton = driver.findElement(By.id("searchButton"));
+    searchButton.click();
+
+    // Validate no results message
+    WebElement noResultsMessage = driver.findElement(By.id("noResultsMessage"));
+    Assert.assertTrue(noResultsMessage.isDisplayed());
+}
+
+// Similar teardown code as before
+```
+
+**3. Automated Test Script for Shopping Cart and Checkout Process:**
+
+```java
+// Similar setup code as before
+
+@Test
+public void testAddToCartAndCheckout() {
+    // Navigate to a product page
+    driver.get("url/to/product/page");
+
+    // Add the product to the cart
+    WebElement addToCartButton = driver.findElement(By.id("addToCartButton"));
+    addToCartButton.click();
+
+    // Navigate to the cart
+    WebElement cartLink = driver.findElement(By.id("cartLink"));
+    cartLink.click();
+
+    // Proceed to checkout
+    WebElement checkoutButton = driver.findElement(By.id("checkoutButton"));
+    checkoutButton.click();
+
+    // Fill in valid shipping and payment details
+    WebElement shippingAddressInput = driver.findElement(By.id("shippingAddress"));
+    WebElement paymentInput = driver.findElement(By.id("payment"));
+
+    shippingAddressInput.sendKeys("123 Main St, City, Country");
+    paymentInput.sendKeys("ValidCreditCard123");
+
+    // Submit the checkout form
+    WebElement submitOrderButton = driver.findElement(By.id("submitOrderButton"));
+    submitOrderButton.click();
+
+    // Validate order confirmation
+    WebElement confirmationMessage = driver.findElement(By.id("confirmationMessage"));
+    Assert.assertTrue(confirmationMessage.isDisplayed());
+}
+
