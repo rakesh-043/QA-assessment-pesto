@@ -1,0 +1,100 @@
+Functional Test Cases: E-Commerce Website
+1. User Registration:
+
+Positive Test Cases:
+1. Verify that a new user can successfully register with valid information.
+   - Input: Valid email, password, and other required details.
+   - Expected Result: User is registered, and a confirmation email is sent.
+
+2. Confirm that the system displays an error message when attempting to register with an existing email address.
+   - Input: Existing email during registration.
+   - Expected Result: User receives an error message indicating the email is already in use.
+
+3. Check if the system enforces password complexity during registration.
+   - Input: Weak password during registration.
+   - Expected Result: User receives an error message prompting them to use a stronger password.
+
+Negative Test Cases:
+1. Validate that registration fails with incomplete mandatory fields.
+   - Input: Missing email or password during registration.
+   - Expected Result: User receives an error message indicating missing information.
+
+2. Confirm that the system prevents registration with an invalid email format.
+   - Input: Invalid email format during registration.
+   - Expected Result: User receives an error message indicating an invalid email format.
+
+2. Product Browsing and Searching:
+
+Positive Test Cases:
+1. Ensure that users can browse products by category and subcategory.
+   - Action: Navigate through product categories and subcategories.
+   - Expected Result: Products within the selected category are displayed.
+
+2. Verify that the search functionality returns relevant results based on product names and keywords.
+   - Input: Search for a product using its name or keywords.
+   - Expected Result: Relevant products matching the search criteria are displayed.
+
+3. Confirm that sorting options (e.g., price, popularity) work as expected.
+   - Action: Sort products by price and popularity.
+   - Expected Result: Products are arranged in the expected order based on the selected sorting criteria.
+
+*Negative Test Cases:*
+1. Check that the system handles gracefully when searching for non-existing products.
+   - Input: Search for a product that doesn't exist.
+   - Expected Result: No results are displayed, and the system provides a clear message.
+
+2. Confirm that pagination controls work correctly when there are multiple pages of search results.
+   - Action: Navigate through multiple pages of search results.
+   - Expected Result: Pagination controls allow the user to move between pages, and the correct products are displayed.
+
+**3. Shopping Cart and Checkout Process:**
+
+*Positive Test Cases:*
+1. Validate that users can add products to the shopping cart.
+   - Action: Add products to the shopping cart.
+   - Expected Result: Selected products are added to the cart, and the cart reflects the correct quantity.
+
+2. Confirm that the cart updates dynamically when adding or removing items.
+   - Action: Add and remove items from the cart.
+   - Expected Result: Cart updates in real-time, and the total reflects the changes made.
+
+3. Verify that the checkout process completes successfully, including payment.
+   - Action: Proceed through the checkout process and complete payment.
+   - Expected Result: Order is confirmed, and the user receives an order confirmation.
+
+*Negative Test Cases:*
+1. Check that the system prevents checkout with an empty shopping cart.
+   - Action: Attempt to proceed to checkout with an empty cart.
+   - Expected Result: User receives an error message preventing checkout.
+
+2. Validate error handling when payment fails during the checkout process.
+   - Action: Attempt to complete payment with incorrect payment details.
+   - Expected Result: User receives an error message indicating the payment failure.
+
+**4. Order Management:**
+
+*Positive Test Cases:*
+1. Confirm that users can view their order history.
+   - Action: Access the order history section.
+   - Expected Result: User can view a list of their previous orders.
+
+2. Validate that users receive order confirmation emails.
+   - Action: Place an order.
+   - Expected Result: User receives an order confirmation email.
+
+3. Verify that order status is updated correctly (e.g., processing, shipped).
+   - Action: Track an order through the various stages.
+   - Expected Result: Order status is updated accurately as it progresses.
+
+*Negative Test Cases:*
+1. Ensure that unauthorized users cannot access other users' order history.
+   - Action: Attempt to access another user's order history.
+   - Expected Result: Unauthorized access is denied, and the system prompts for authentication.
+
+2. Check that the system handles gracefully when order status updates fail.
+   - Action: Simulate a failure in updating order status.
+   - Expected Result: The system provides an error message, and the order status remains unchanged.
+
+**Review and Approval:**
+These functional test cases require review and approval from relevant stakeholders before execution.
+
