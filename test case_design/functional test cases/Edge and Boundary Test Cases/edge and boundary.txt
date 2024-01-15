@@ -1,0 +1,84 @@
+**Edge and Boundary Test Cases: E-Commerce Website**
+
+**1. User Registration:**
+
+*Edge Test Cases:*
+1. Verify the system's response when a user registers with the minimum valid email and password length.
+   - Input: Email (minimum length), Password (minimum length).
+   - Expected Result: Successful registration.
+
+2. Confirm the system's response when a user registers with the maximum valid email and password length.
+   - Input: Email (maximum length), Password (maximum length).
+   - Expected Result: Successful registration.
+
+*Boundary Test Cases:*
+1. Validate the system's behavior when a user attempts to register with an email length just below the minimum requirement.
+   - Input: Email (minimum length - 1), Password (valid).
+   - Expected Result: User receives an error message indicating insufficient email length.
+
+2. Verify the system's behavior when a user attempts to register with an email length just above the maximum requirement.
+   - Input: Email (maximum length + 1), Password (valid).
+   - Expected Result: User receives an error message indicating excessive email length.
+
+**2. Product Browsing and Searching:**
+
+*Edge Test Cases:*
+1. Ensure the system correctly handles browsing products when there is only one product in a category.
+   - Action: Navigate through a category with only one product.
+   - Expected Result: The product is displayed without issues.
+
+2. Confirm that the system handles searching for a product with the minimum and maximum length of a product name.
+   - Input: Search for a product with the minimum and maximum name length.
+   - Expected Result: Relevant results are displayed for both cases.
+
+*Boundary Test Cases:*
+1. Validate the system's response when a user attempts to search for a product with a name length just below the minimum requirement.
+   - Input: Search for a product with a name (minimum length - 1).
+   - Expected Result: No relevant results are displayed, and the system provides a clear message.
+
+2. Verify the system's behavior when a user attempts to search for a product with a name length just above the maximum requirement.
+   - Input: Search for a product with a name (maximum length + 1).
+   - Expected Result: No relevant results are displayed, and the system provides a clear message.
+
+**3. Shopping Cart and Checkout Process:**
+
+*Edge Test Cases:*
+1. Confirm the system's response when a user adds the maximum allowed quantity of a single item to the shopping cart.
+   - Action: Add the maximum quantity of a single item to the cart.
+   - Expected Result: The cart displays the correct quantity, and the user can proceed to checkout.
+
+2. Verify the system's behavior when a user attempts to add items to the cart when the cart is already at its maximum capacity.
+   - Action: Add items to the cart beyond the maximum allowed capacity.
+   - Expected Result: User receives an error message indicating the maximum capacity has been reached.
+
+*Boundary Test Cases:*
+1. Validate the system's response when a user attempts to proceed to checkout with the minimum and maximum quantities of items in the cart.
+   - Action: Proceed to checkout with the minimum and maximum quantities in the cart.
+   - Expected Result: The system allows the user to proceed in both cases.
+
+2. Check the system's behavior when a user attempts to remove items from an empty shopping cart.
+   - Action: Remove items from an empty cart.
+   - Expected Result: The system provides an error message indicating there are no items to remove.
+
+**4. Order Management:**
+
+*Edge Test Cases:*
+1. Verify the system's response when a user tries to access their order history with no previous orders.
+   - Action: Access order history with no orders.
+   - Expected Result: The system displays a message indicating no previous orders.
+
+2. Confirm the system's behavior when a user attempts to view the details of an order with the maximum number of items.
+   - Action: View details of an order with the maximum number of items.
+   - Expected Result: The system displays all order details accurately.
+
+*Boundary Test Cases:*
+1. Validate the system's response when a user attempts to view their order history with the minimum and maximum allowed number of orders.
+   - Action: View order history with the minimum and maximum number of orders.
+   - Expected Result: The system allows the user to view order history in both cases.
+
+2. Verify the system's behavior when a user attempts to track an order with the minimum and maximum allowed number of status updates.
+   - Action: Track an order with the minimum and maximum number of status updates.
+   - Expected Result: The system accurately updates and displays order status in both cases.
+
+**Review and Approval:**
+These edge and boundary test cases require review and approval from relevant stakeholders before execution.
