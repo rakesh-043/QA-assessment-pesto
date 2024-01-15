@@ -1,0 +1,91 @@
+Test Case Design: E-Commerce Website
+
+Objective:
+The objective of this document is to outline the test cases for validating the functionality, performance, security, and usability of the e-commerce website.
+
+1. User Registration:
+
+Positive Test Cases:
+1. Verify that a new user can successfully register with valid information.
+2. Confirm that the system displays an error message when attempting to register with an existing email address.
+3. Check if the system enforces password complexity during registration.
+
+Negative Test Cases:
+1. Validate that registration fails with incomplete mandatory fields.
+2. Confirm that the system prevents registration with an invalid email format.
+
+2. Product Browsing and Searching:
+
+*Positive Test Cases:*
+1. Ensure that users can browse products by category and subcategory.
+2. Verify that the search functionality returns relevant results based on product names and keywords.
+3. Confirm that sorting options (e.g., price, popularity) work as expected.
+
+*Negative Test Cases:*
+1. Check that the system handles gracefully when searching for non-existing products.
+2. Confirm that pagination controls work correctly when there are multiple pages of search results.
+
+**3. Shopping Cart and Checkout Process:**
+
+*Positive Test Cases:*
+1. Validate that users can add products to the shopping cart.
+2. Confirm that the cart updates dynamically when adding or removing items.
+3. Verify that the checkout process completes successfully, including payment.
+
+*Negative Test Cases:*
+1. Check that the system prevents checkout with an empty shopping cart.
+2. Validate error handling when payment fails during the checkout process.
+
+**4. Order Management:
+
+Positive Test Cases:
+1. Confirm that users can view their order history.
+2. Validate that users receive order confirmation emails.
+3. Verify that order status is updated correctly (e.g., processing, shipped).
+
+*Negative Test Cases:*
+1. Ensure that unauthorized users cannot access other users' order history.
+2. Check that the system handles gracefully when order status updates fail.
+
+**5. Security and Privacy:**
+
+*Positive Test Cases:*
+1. Validate that user data is securely stored and encrypted.
+2. Confirm that the login process is secure and prevents brute force attacks.
+
+*Negative Test Cases:*
+1. Attempt unauthorized access to user accounts with incorrect credentials.
+2. Validate that the system does not expose sensitive information in error messages.
+
+**6. Performance Testing:**
+
+*Positive Test Cases:*
+1. Validate that the website loads within an acceptable time frame under normal conditions.
+2. Confirm that the system handles concurrent user sessions without significant performance degradation.
+
+Negative Test Cases:
+1. Test the website's performance under peak load to identify potential bottlenecks.
+2. Validate the response time degradation under slow network conditions.
+
+7. Usability Testing:
+
+*Positive Test Cases:
+1. Confirm that the website is responsive and displays correctly on various devices.
+2. Validate that navigation is intuitive and user-friendly.
+
+Negative Test Cases:
+1. Test the website's usability under low bandwidth conditions.
+2. Check for accessibility issues for users with disabilities.
+
+8. Browser Compatibility:
+
+Positive Test Cases:
+1. Validate that the website functions correctly on the latest versions of major browsers (Chrome, Firefox, Safari, Edge).
+
+Negative Test Cases:
+1. Identify and document any functionality discrepancies or layout issues on different browsers.
+
+Review and Approval:
+
+This test case design document requires review and approval from relevant stakeholders before the testing phase commences.
+
